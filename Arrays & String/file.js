@@ -1,6 +1,11 @@
 // Find a peak element which is not smaller than its neighbors
 //==========================================================
 
+// ---- ALGO -----
+// Iterate through the elements of the array.
+// For each element, check if it is greater than or equal to its two neighbors (if they exist). If it is, then it is a peak element.
+// If no peak element is found, return -1.
+
 function findPeakElement(arr) {
   for (let i = 1; i < arr.length - 1; i++) {
     if (arr[i] > arr[i - 1] && arr[i] >= arr[i + 1]) {
