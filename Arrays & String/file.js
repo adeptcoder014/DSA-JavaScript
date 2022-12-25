@@ -1,12 +1,18 @@
-// Find a peak element which is not smaller than its neighbors	
+// Find a peak element which is not smaller than its neighbors
+//==========================================================
 
-let arr = [1,2,3,4,5,6,7,8,9,10,97] 
-console.log('----__---->',arr.length)
-
-for(let i=0; i<= arr.length;i++){
-
-    console.log('-->',arr[arr.length-1])
+function findPeakElement(arr) {
+  for (let i = 1; i < arr.length - 1; i++) {
+    if (arr[i] > arr[i - 1] && arr[i] >= arr[i + 1]) {
+      return arr[i];
+    }
+  }
+  return -1;
 }
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 9];
+
+console.log("-->", findPeakElement(arr));
 //==========================================================
 
 // Find the minimum and maximum element in an array
