@@ -2,13 +2,16 @@
 
 def rev_string_og(str):
     
-    reverse_string=''
+    reversed_string=''
     
-    for i in range(len(str)):
-        lastIndexedLetter = str[len(str)-i -1]
-        reverse_string  = reverse_string + lastIndexedLetter
+    # for i in range(len(str)):
+    #     lastIndexedLetter = str[len(str)-i -1]
+    #     reverse_string  = reverse_string + lastIndexedLetter
+        
+    for i in range(len(str) - 1, -1, -1):
+        reversed_string += str[i]
             
-    return reverse_string
+    return reversed_string
 
 
 # Given a string, find the length of the longest substring without repeating characters.
@@ -24,12 +27,7 @@ def length_of_longest_substring(s):
     max_length = 0
     start = 0
 
-    str='abcc'
-    obj ={
-        'a':0,
-        'b':1,
-        'c':1,
-    }
+ 
     
     # Iterate through the characters in the input string 's'.
     for i in range(len(s)):
@@ -66,6 +64,6 @@ def count_occurrences(s):
 # Example usage:
 
 
-print(length_of_longest_substring('ABBCD1234'))
+print(rev_string_og('ABBCD1234'))
 
 
